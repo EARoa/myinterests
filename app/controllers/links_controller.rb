@@ -8,7 +8,7 @@ class LinksController < ApplicationController
   end
 
   def create
-
+    @link = Link.all
     @link = Link.new(params.require(:link).permit(:url, :photo, :notes))
     if @link.save
       redirect_to root_path
