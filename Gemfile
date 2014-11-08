@@ -37,4 +37,10 @@ gem 'spring',        group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
+gem 'bootstrap-sass'
+gem 'simple_form', '3.1.0.rc2'
+gem 'carrierwave'
+gem 'mini_magick', '4.0.0.rc'
+gem 'fog'
+gem 'dotenv-rails'
+gem 'rails_12factor'
