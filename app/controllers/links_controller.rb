@@ -1,20 +1,17 @@
 class LinksController < ApplicationController
+
+
   def index
     @links = Link.all
-  end
-
-  def new
     @link = Link.new
   end
 
   def create
-    @link = Link.all
     @link = Link.new(params.require(:link).permit(:url, :photo, :notes))
-    if @link.save
-      redirect_to root_path
-    else
-      render :new
-    end
-  end
+
+    @link.save
+    @links = Link.all
+    @link = Link.new
+   end
 
 end
