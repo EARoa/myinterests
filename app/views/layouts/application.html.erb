@@ -9,15 +9,16 @@
 <body>
 
 <div class="container">
-  <%= link_to "New Link", "#", class: "btn btn-default", data: {toggle: "modal", target: "#newLinkModal"} %>
-
+  <%= link_to "New", "#", class: "btn btn-success", data: {toggle: "modal", target: "#newLinkModal"} %>
 
   <!-- Modal -->
 <div class="modal fade" id="newLinkModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div id="link-form">
+
         <%= render partial: 'links/form' %>
+
       </div>
     </div>
   </div>

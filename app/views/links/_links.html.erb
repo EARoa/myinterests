@@ -3,12 +3,36 @@
     <%= image_tag link.photo.url(:thumb) %>
   <% end %>
 
+
+
+
+
+
   <div class="modal fade" id="link-modal<%= link.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
-        <div id="link-form">
-          <%= image_tag link.photo.url(:large) %>
+
+
+      <div id="link-form">
+
+
+
+
+
+        <b> <%= link.url %> </b>
+        <br />  <br />
+
+      
+
+
+        <br />  <br />
+
+        <%= image_tag link.photo.url(:large) %>
+        <br />  <br />
+        <%= link.notes %>
+
         </div>
+
       </div>
     </div>
   </div>
