@@ -1,10 +1,7 @@
 <% @links.each do |link| %>
   <%= link_to "#", data: {toggle: "modal", target: "#link-modal#{link.id}"} do %>
-    <%= image_tag link.photo.url(:thumb) %>
-  <% end %>
-
-
-
+  <%= image_tag link.photo.url(:thumb) %>
+<% end %>
 
 
 
@@ -15,20 +12,13 @@
 
       <div id="link-form">
 
-
-
-
-
-        <b> <%= link.url %> </b>
-        <br />  <br />
-
-
-
+      <div id="link-url"> <%= link.url %> </div>
         <br />  <br />
 
         <%= image_tag link.photo.url(:large) %>
         <br />  <br />
-        <%= link.notes %>
+
+        <div id="link-notes"><%= link.notes %></div>
 
         </div>
 

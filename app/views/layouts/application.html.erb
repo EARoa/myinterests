@@ -8,25 +8,57 @@
 </head>
 <body>
 
-<div class="container">
-  <%= link_to "New", "#", class: "btn btn-success", data: {toggle: "modal", target: "#newLinkModal"} %>
 
+
+<div class="container">
+
+<table align="right">
+  <tr>
+    <td>
+      <%= link_to "New", "#", class: "btn btn-success", data: {toggle: "modal", target: "#newLinkModal"} %>
+    </td>
+    <td>
+      <% if user_signed_in? %>
+        Welcome back <%= current_user.email %>!
+        <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+      <% end %>
+    </td>
+
+  </tr>
+</table>
+
+
+
+  <p class="notice"><%= notice %></p>
+
+  <p class="alert"><%= alert %></p>
+
+
+
+<div id="modaldiv"> <!-- Modal Div -->
   <!-- Modal -->
 <div class="modal fade" id="newLinkModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div id="link-form">
+
+      <div>
 
         <%= render partial: 'links/form' %>
 
       </div>
+
     </div>
   </div>
 </div>
 
-
+</div> <!-- Modal Div -->
   <%= yield %>
-</div>
+
+
+
+
+
+</div>  <!-- Container Div -->
 
 </body>
 </html>

@@ -1,17 +1,18 @@
 class LinksController < ApplicationController
 
+  before_action :authenticate_user!
 
   def index
     @links = Link.all
     @link = Link.new
   end
 
-  def create
+def create
     @link = Link.new(params.require(:link).permit(:url, :photo, :notes))
-
-    @link.save
-    @links = Link.all
-    @link = Link.new
-   end
+    if @link.save
+      @links = Link.all
+      @link = Link.new
+    end
+  end
 
 end
