@@ -1,10 +1,10 @@
 <% if @link.errors.any? %>
-  $("#link-form").html("<%= j render partial: 'links/form' %>");
+  $("#link-form").html("<%= j render partial: "links/form" %>");
 <% else %>
 
 
-  $("#newLinkModal").modal("hide");
-  $("#links").html("<%= j render partial: 'links/links' %>");
-  $("#link-form").html("<%= j render partial: 'links/form' %>");
 
+  $("#links").html("<%= j render partial: "links" %>");
+  $("#link-form").html("<%= j render partial: "links/form" %>");
+  $("#newLinkModal").modal("hide");
 <% end %>
