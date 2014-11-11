@@ -1,16 +1,6 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 
-
-// .newLinkModal {
-//
-//  padding: 20px;
-//   padding-left: 3px;
-//   padding-right: 3px;
-//
-// }
-
-
 #link-form {
       margin-left: 3em;
       margin:0 auto;
@@ -19,20 +9,25 @@
 
 #link-url{
 
-  font-size: 3em;
-  padding-top: 1em;
+  font-size: 2em;
+  padding-top: 1rem;
 
 }
 
 
 #link-notes{
 
-  font-size: 2em;
+  font-size: 1.6em;
   padding-bottom: 1em;
 
 }
 
 
 th,td {
-    padding: 15px;
+    padding: .5em;
+}
+
+
+#links {
+  margin-left: 10em;
 }
